@@ -1,0 +1,14 @@
+html{
+  background: url("/images/stagg.jpeg") center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#page-logo{
+  width: 24%;
+  height: auto;
+  margin-left: 38%;
+  margin-right: 38%;
+}
