@@ -1,6 +1,6 @@
 class CreateMemberTable < ActiveRecord::Migration
   def change
-    create_table :member do |t|
+    create_table :members do |t|
       t.string :name
       t.string :email
       t.timestamps

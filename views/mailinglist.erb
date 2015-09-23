@@ -1,0 +1,17 @@
+<script type="text/template" id="member-template">
+  <h2 class="line"><%%= name %></h2><h2><%%= email %></h2>
+  <button type="button" class="remove top">delete</button>
+</script>
+
+<form class="create-member">
+  <h2>Sign-up to join the We Who Seek community.</h2>
+  <input type="text" id="name" class='member-inputs' name="member[name]" placeholder="Name?"><br/>
+  <input type="email" id="email" class='member-inputs' name="member[email]" placeholder="Email Address?"><br/>
+  <input type="submit" value="Sign Up!">
+</form>
+
+<ul id="member-list">
+
+</ul>
+
+<script src="/js/scripts.js" charset="utf-8"></script>
