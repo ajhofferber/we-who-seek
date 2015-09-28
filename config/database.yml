@@ -1,3 +1,7 @@
 development:
   adapter: postgresql
   database: we_who_seek
+
+production:
+  adapter: postgresql
+  database: we_who_seek_production
