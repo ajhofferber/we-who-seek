@@ -21,11 +21,12 @@ body{
   font-family: 'Amatic SC', cursive;
   background-color: whitesmoke;
   color: darkslategrey;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 a{
   color: salmon;
+  font-size: 18px;
 }
 
 h2{
@@ -56,6 +57,8 @@ button{
   border-radius: 25px;
   font-size: 8px;
   line-height: 8px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 18px;
 }
 
 h5{
@@ -68,8 +71,14 @@ h5{
   margin: .5% 25%;
   width: 50%;
   height: 20px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 18px;
 }
 
+.member-submit{
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.2em;
+}
 
 .container {
   max-width: 960px;
@@ -84,7 +93,6 @@ section.section h2 {
 }
 section.section p {
   margin-bottom: 40px;
-  font-size: 16px;
   font-weight: 300;
 }
 section.section p:last-child {
