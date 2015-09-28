@@ -1,23 +1,21 @@
 
-
 $(document).ready(function(){
-console.log('scroll on');
-  var parallax = document.querySelectorAll(".parallax"),
-      speed = 0.5;
-
-  window.onscroll = function(){
-    [].slice.call(parallax).forEach(function(el,i){
-
-      var windowYOffset = window.pageYOffset,
-          elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-      el.style.backgroundPosition = elBackgrounPos;
-
-    });
-  };
+  authenticateEmail();
 
 });
 
+
+
+function authenticateEmail(){
+  $('.member-submit').click(function() {
+    var str = $('.email').val();
+      if (str.indexOf('@')=== -1) {
+        $('.email').css('border', '1px solid red')
+      };
+  });
+};
+
+//Backbone Model
 var Member = Backbone.Model.extend({
   defaults:{
     'name': 'tbd',
@@ -25,17 +23,18 @@ var Member = Backbone.Model.extend({
   }
 });
 
-
+//Backbone Collection
 var MemberList = Backbone.Collection.extend({
   model: Member,
   url: '/api/members'
 });
 
+//Backbone Model View
 var MemberView = Backbone.View.extend({
   initialize: function() {
     this.listenTo(this.model, 'change', this.render);
   },
-  tagName: 'li',
+  tagName: 'h3',
   className: 'member',
   template: _.template( $('#member-template').html() ),
   render: function(){
@@ -53,7 +52,7 @@ var MemberView = Backbone.View.extend({
     this.$el.remove();
   },
 });
-
+//Backbone Collection View
 var MemberListView = Backbone.View.extend({
   initialize: function(){
     this.listenTo(this.collection, 'add', this.render );
@@ -78,7 +77,7 @@ var membersPainter = new MemberListView({
 
 members.fetch();
 
-
+//Create memeber
 $('form.create-member').on('submit', function(e){
   e.preventDefault();
   var name = $('#name').val();

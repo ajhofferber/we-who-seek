@@ -13,82 +13,116 @@
   margin-right: 38%;
 }
 
+img{
+  margin: 17%;
+}
 
-/* ============================================================
-  PRIMARY STRUCTURE
-============================================================ */
+body{
+  font-family: 'Quicksand', sans-serif;
+  background-color: whitesmoke;
+  color: darkslategrey;
+  font-size: 16px;
+}
+
+a{
+  color: salmon;
+}
+
+h2{
+  font-size: 2em;
+}
+
+h3{
+  font-size: 1.4em;
+}
+
+#sign-up-form{
+  border: 5px solid dimgrey;
+  padding: 5%;
+  margin: 5% 25%;
+  text-align: center;
+}
+
+#home{
+  margin-left: 90%;
+}
+
+button{
+  height: 15px;
+  width: 15px;
+  padding: 0;
+  margin-left: 35%;
+  margin-bottom: -10%;
+  border-radius: 25px;
+  font-size: 8px;
+  line-height: 8px;
+}
+
+h5{
+  margin-top: -5%;
+  font-size: .8em;
+}
+
+
+.member-inputs{
+  margin: .5% 25%;
+  width: 50%;
+  height: 20px;
+}
+
+
 .container {
   max-width: 960px;
   margin: 0 auto;
 }
-
-/* ============================================================
-  SECTIONS
-============================================================ */
-section.module:last-child {
+section.section:last-child {
   margin-bottom: 0;
 }
-section.module h2 {
+section.section h2 {
   margin-bottom: 40px;
-  font-family: "Roboto Slab", serif;
   font-size: 30px;
 }
-section.module p {
+section.section p {
   margin-bottom: 40px;
   font-size: 16px;
   font-weight: 300;
 }
-section.module p:last-child {
+section.section p:last-child {
   margin-bottom: 0;
 }
-section.module.content {
+
+section.section.content {
   padding: 40px 0;
 }
-section.module.parallax {
-  padding: 240px 0;
-  background-position: 0 0;
-}
-section.module.parallax h1 {
-  color: #1e1e1e;
-  font-size: 48px;
-  line-height: 1;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px white;
-}
-section.module.parallax-1 {
-  background: url("/images/stagg.jpeg") center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+section.section.parallax {
+  height: 900px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
-section.module.parallax-2 {
-  background: url("/images/stagg.jpeg") center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
+section.section.parallax-1 {
+  background-image: url("/images/bigcoast.jpg");
+}
+section.section.parallax-2 {
+  background-image: url("/images/zanzibar3.jpg");
 }
 
 
 @media all and (min-width: 600px) {
-  section.module h2 {
+  section.section h2 {
     font-size: 42px;
   }
-  section.module p {
+  section.section p {
     font-size: 20px;
   }
-  section.module.parallax {
-    padding: 300px 0;
-  }
-  section.module.parallax h1 {
+  section.section.parallax h1 {
     font-size: 96px;
   }
 }
 @media all and (min-width: 960px) {
-  section.module.parallax h1 {
+  section.section.parallax h1 {
     font-size: 160px;
   }
 }
